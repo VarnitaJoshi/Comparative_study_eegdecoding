@@ -1,0 +1,41 @@
+  epoch    train_accuracy    train_loss    valid_acc    valid_accuracy    valid_loss      lr       dur
+-------  ----------------  ------------  -----------  ----------------  ------------  ------  --------
+      1            [36m0.2500[0m        [32m2.2034[0m       [35m0.2500[0m            [31m0.2500[0m     [94m1635.6810[0m  0.0200  167.7859
+      2            0.2500        [32m1.6351[0m       0.2500            0.2500       [94m65.7971[0m  0.0200  246.3852
+      3            0.2500        [32m1.5448[0m       0.2500            0.2500       [94m10.4942[0m  0.0200  192.8365
+      4            0.2431        [32m1.4890[0m       [35m0.2569[0m            [31m0.2569[0m        [94m1.7674[0m  0.0200  380.7341
+      5            [36m0.2569[0m        [32m1.4165[0m       0.2569            0.2569        1.8035  0.0199  442.7659
+      6            [36m0.2674[0m        1.4433       0.2153            0.2153        [94m1.4361[0m  0.0199  436.9195
+      7            [36m0.3299[0m        [32m1.3964[0m       [35m0.2743[0m            [31m0.2743[0m        [94m1.3958[0m  0.0198  447.6617
+      8            0.3194        [32m1.3891[0m       [35m0.2847[0m            [31m0.2847[0m        [94m1.3841[0m  0.0198  232.9429
+      9            0.2812        [32m1.3695[0m       0.2778            0.2778        1.4004  0.0197  202.2793
+     10            0.2743        1.3999       0.2535            0.2535        1.4133  0.0196  171.4678
+     11            0.3194        1.3941       [35m0.2917[0m            [31m0.2917[0m        1.3946  0.0195  169.2795
+     12            0.2917        [32m1.3226[0m       [35m0.2986[0m            [31m0.2986[0m        1.5091  0.0194  169.2575
+     13            0.3264        1.3546       0.2431            0.2431        1.4037  0.0193  169.0193
+     14            0.2986        [32m1.3207[0m       0.2708            0.2708        1.4137  0.0192  168.8485
+     15            0.3160        [32m1.2813[0m       0.2639            0.2639        1.4279  0.0190  169.2434
+     16            [36m0.3542[0m        [32m1.2605[0m       0.2847            0.2847        1.5209  0.0189  169.6091
+     17            [36m0.3576[0m        [32m1.2230[0m       0.2882            0.2882        1.5166  0.0187  169.9615
+     18            0.2500        [32m1.2060[0m       0.2500            0.2500        5.9837  0.0186  169.7674
+     19            0.3472        [32m1.2035[0m       [35m0.3125[0m            [31m0.3125[0m        1.5560  0.0184  169.2871
+     20            0.2882        1.2797       0.2674            0.2674        1.6622  0.0182  168.3584
+     21            [36m0.4340[0m        1.2647       [35m0.3299[0m            [31m0.3299[0m        1.4196  0.0181  170.0506
+     22            0.3611        [32m1.1695[0m       0.2535            0.2535        1.7536  0.0179  169.2548
+     23            0.2604        [32m1.0434[0m       0.2465            0.2465        3.7360  0.0177  176.4192
+     24            0.4062        1.1310       0.3056            0.3056        1.6861  0.0175  170.1064
+     25            0.3715        1.1233       0.2535            0.2535        1.9830  0.0172  428.1206
+Stopping since valid_loss has not improved in the last 18 epochs.
+Elapsed time: 7166.369878530502 seconds
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']

@@ -1,0 +1,67 @@
+  epoch    train_accuracy    train_loss    valid_acc    valid_accuracy    valid_loss      lr     dur
+-------  ----------------  ------------  -----------  ----------------  ------------  ------  ------
+      1            [36m0.3542[0m        [32m3.9326[0m       [35m0.3160[0m            [31m0.3160[0m       [94m12.4297[0m  0.0200  8.2723
+      2            [36m0.3993[0m        [32m3.4180[0m       0.2778            0.2778       [94m11.5247[0m  0.0200  8.0677
+      3            0.3472        [32m2.8247[0m       0.2882            0.2882       [94m11.2709[0m  0.0200  7.9911
+      4            [36m0.5069[0m        [32m2.1540[0m       [35m0.3333[0m            [31m0.3333[0m        [94m6.3063[0m  0.0200  8.8151
+      5            [36m0.6736[0m        2.1846       [35m0.3958[0m            [31m0.3958[0m        [94m5.0250[0m  0.0199  9.5146
+      6            0.6632        [32m2.0361[0m       0.3854            0.3854        [94m4.8545[0m  0.0199  8.7858
+      7            [36m0.8924[0m        [32m1.8404[0m       [35m0.4236[0m            [31m0.4236[0m        [94m3.9747[0m  0.0198  8.8196
+      8            0.8194        [32m1.3348[0m       0.4167            0.4167        4.8088  0.0198  8.5444
+      9            0.8542        1.6919       0.4167            0.4167        4.9611  0.0197  8.4588
+     10            0.8438        1.4975       0.4201            0.4201        4.8781  0.0196  8.9578
+     11            0.8854        1.6154       0.4062            0.4062        5.4489  0.0195  8.9562
+     12            0.8576        1.3736       [35m0.4444[0m            [31m0.4444[0m        5.1075  0.0194  7.7435
+     13            0.8160        1.5399       0.3854            0.3854        5.7188  0.0193  8.5475
+     14            0.8507        1.3739       [35m0.4549[0m            [31m0.4549[0m        5.2594  0.0192  10.0144
+     15            [36m0.9410[0m        [32m1.1422[0m       0.4271            0.4271        5.4962  0.0190  7.2228
+     16            0.8785        [32m0.9629[0m       0.4271            0.4271        6.1680  0.0189  8.6446
+     17            0.7812        1.4797       [35m0.4618[0m            [31m0.4618[0m        6.8096  0.0187  8.9572
+     18            0.8576        1.3231       0.3993            0.3993        6.6282  0.0186  10.3731
+     19            0.9306        1.1023       0.4271            0.4271        6.3121  0.0184  8.8333
+     20            0.9340        1.2359       0.4549            0.4549        6.8833  0.0182  10.1628
+     21            [36m0.9549[0m        [32m0.6501[0m       0.4410            0.4410        6.6145  0.0181  9.9116
+     22            [36m0.9653[0m        1.0565       [35m0.4826[0m            [31m0.4826[0m        5.7515  0.0179  8.0623
+     23            0.9444        1.0631       0.4792            0.4792        5.7444  0.0177  9.6727
+     24            [36m0.9792[0m        0.8000       0.4653            0.4653        5.7494  0.0175  9.4381
+Stopping since valid_loss has not improved in the last 18 epochs.
+Elapsed time: 282.4015893936157 seconds
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+Used Annotations descriptions: ['feet', 'left_hand', 'right_hand', 'tongue']
+============================================================================================================================================
+Layer (type (var_name):depth-idx)        Input Shape               Output Shape              Param #                   Kernel Shape
+============================================================================================================================================
+ShallowFBCSPNet (ShallowFBCSPNet)        [1, 22, 1125]             [1, 4]                    --                        --
+├─Ensure4d (ensuredims): 1-1             [1, 22, 1125]             [1, 22, 1125, 1]          --                        --
+├─Rearrange (dimshuffle): 1-2            [1, 22, 1125, 1]          [1, 1, 1125, 22]          --                        --
+├─CombinedConv (conv_time_spat): 1-3     [1, 1, 1125, 22]          [1, 40, 1101, 1]          36,240                    --
+├─BatchNorm2d (bnorm): 1-4               [1, 40, 1101, 1]          [1, 40, 1101, 1]          80                        --
+├─Expression (conv_nonlin_exp): 1-5      [1, 40, 1101, 1]          [1, 40, 1101, 1]          --                        --
+├─AvgPool2d (pool): 1-6                  [1, 40, 1101, 1]          [1, 40, 69, 1]            --                        [75, 1]
+├─Expression (pool_nonlin_exp): 1-7      [1, 40, 69, 1]            [1, 40, 69, 1]            --                        --
+├─Dropout (drop): 1-8                    [1, 40, 69, 1]            [1, 40, 69, 1]            --                        --
+├─Sequential (final_layer): 1-9          [1, 40, 69, 1]            [1, 4]                    --                        --
+│    └─Conv2d (conv_classifier): 2-1     [1, 40, 69, 1]            [1, 4, 1, 1]              11,044                    [69, 1]
+│    └─LogSoftmax (logsoftmax): 2-2      [1, 4, 1, 1]              [1, 4, 1, 1]              --                        --
+│    └─Expression (squeeze): 2-3         [1, 4, 1, 1]              [1, 4]                    --                        --
+============================================================================================================================================
+Total params: 47,364
+Trainable params: 47,364
+Non-trainable params: 0
+Total mult-adds (Units.MEGABYTES): 0.01
+============================================================================================================================================
+Input size (MB): 0.10
+Forward/backward pass size (MB): 0.35
+Params size (MB): 0.04
+Estimated Total Size (MB): 0.50
+============================================================================================================================================
