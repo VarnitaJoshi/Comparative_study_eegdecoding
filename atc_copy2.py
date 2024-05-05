@@ -50,7 +50,7 @@ windows_dataset = create_windows_from_events(
     dataset,
     trial_start_offset_samples = trial_start_offset_samples,
     trial_stop_offset_samples = 0,
-    preload = True
+    preload = False
 )
 
 splitted = windows_dataset.split('session')
